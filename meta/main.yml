@@ -1,0 +1,14 @@
+galaxy_info:
+  author: digimokan
+  description: "Install and configure the Chromium browser"
+  license: "MIT"
+  min_ansible_version: 2.7
+  platforms:
+    - name: Archlinux
+      versions:
+        - all
+  galaxy_tags:
+    - archlinux
+    - browser
+    - chromium
+
