@@ -1,0 +1,5 @@
+- name: "Edit Chromium policy '{{ policy_name }}' with string value '{{ string_value }}'"
+  ansible.builtin.include_tasks: edit_policy.yml
+  vars:
+    policy_value: "\"{{ string_value }}\""
+

@@ -1,0 +1,6 @@
+- name: "Set the home page to '{{ home_page }}'"
+  ansible.builtin.include_tasks: func/edit_string_policy.yml
+  vars:
+    policy_name: "HomepageLocation"
+    string_value: "{{ home_page }}"
+

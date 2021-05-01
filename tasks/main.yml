@@ -1,12 +1,12 @@
-- name: "Setup required Chromium config files, for extensions and settings"
-  ansible.builtin.include_tasks: config_files/main.yml
-
 - name: "Install main Chromium application"
   ansible.builtin.include_tasks: install/main.yml
+
+- name: "Setup required Chromium config files, for extensions and settings"
+  ansible.builtin.include_tasks: config_files/main.yml
 
 # - name: "Add optional Chromium extensions"
 #   ansible.builtin.include_tasks: extensions/main.yml
 
-# - name: "Configure system-wide, default Chromium browser settings"
-#   ansible.builtin.include_tasks: settings/main.yml
+- name: "Configure system-wide, default Chromium browser settings"
+  ansible.builtin.include_tasks: settings/main.yml
 
