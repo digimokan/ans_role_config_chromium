@@ -9,7 +9,8 @@
   ansible.builtin.set_fact:
     extension_ids: "{{ extension_ids + [ ext_id ] }}"
   vars:
-    ext_id: " \"gcbommkclmclpchllfjekcdonpmejbdp\""
+    # Note: leading space here, for element separation
+    ext_id: ' "gcbommkclmclpchllfjekcdonpmejbdp"'
   when: install_https_everywhere_ext
 
 - ansible.builtin.debug:
