@@ -5,11 +5,12 @@
       ^  "{{ policy_name }}":
     insertafter: >-
       ^\{$
-    line: "  \"{{ policy_name }}\": {{ policy_value }},"
+    line: "  \"{{ policy_name }}\": {{ policy_value }}{{ last_entry | ternary('', ',') }}"
     state: present
     create: no
   vars:
     locked: false
+    last_entry: false
   become: true
   become_user: root
 
