@@ -5,8 +5,5 @@ install_https_everywhere_ext: true
 install_ublock_origin_ext: true
 
 # install and enable the Surfingkeys browser extension
-install_surfingkeys_ext: false
-
-# install google-widevine add-on for DRM content (e.g. Netflix)
-install_google_widevine_drm_addon: false
+install_surfingkeys_ext: true
 
