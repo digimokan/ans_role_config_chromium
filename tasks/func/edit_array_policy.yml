@@ -1,5 +1,5 @@
 - name: "Set Chromium policy '{{ policy_name }}' to array elements '{{ array_element_list }}'"
   ansible.builtin.include_tasks: edit_policy.yml
   vars:
-    policy_value: "[{{ array_element_list | join(',') }}]"
+    policy_value: "[{{ array_element_list | join(',') }} ]"
 

@@ -9,7 +9,7 @@
   ansible.builtin.set_fact:
     extension_ids: "{{ extension_ids + [ ext_id ] }}"
   vars:
-    ext_id: "\"gcbommkclmclpchllfjekcdonpmejbdp\""
+    ext_id: " \"gcbommkclmclpchllfjekcdonpmejbdp\""
   when: install_https_everywhere_ext
 
 - name: "Add policy setting used to install extensions via extension IDs"
