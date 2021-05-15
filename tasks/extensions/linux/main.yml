@@ -13,9 +13,6 @@
     ext_id: ' "gcbommkclmclpchllfjekcdonpmejbdp"'
   when: install_https_everywhere_ext
 
-- ansible.builtin.debug:
-    var: extension_ids
-
 - name: "Add policy setting used to install extensions via extension IDs"
   ansible.builtin.include_tasks: func/edit_array_policy.yml
   vars:
