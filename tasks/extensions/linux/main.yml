@@ -1,10 +1,15 @@
+# NOTE: to find extension ID, install the ext, then go to chrome://extensions
+# Also see https://www.chromium.org/administrators/policy-list-3#ExtensionInstallForcelist
+
 - name: "Initialize local policy-setting-var to assemble extension IDs"
   ansible.builtin.set_fact:
     extension_ids: []
 
 - name: "Install https-everywhere extensions via policy: {{ install_https_everywhere_ext }}"
   ansible.builtin.set_fact:
-    extension_ids: "{{ extension_ids + [ 'gcbommkclmclpchllfjekcdonpmejbdp' ] }}"
+    extension_ids: "{{ extension_ids + [ ext_id ] }}"
+  vars:
+    ext_id: "\"gcbommkclmclpchllfjekcdonpmejbdp\""
   when: install_https_everywhere_ext
 
 - name: "Add policy setting used to install extensions via extension IDs"
