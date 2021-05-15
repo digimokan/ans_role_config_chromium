@@ -4,7 +4,7 @@
 
 - name: "Install https-everywhere extensions via policy: {{ install_https_everywhere_ext }}"
   ansible.builtin.set_fact:
-    extension_ids: "{{ extension_ids + [ "\"gcbommkclmclpchllfjekcdonpmejbdp\"" ] }}"
+    extension_ids: "{{ extension_ids + [ 'gcbommkclmclpchllfjekcdonpmejbdp' ] }}"
   when: install_https_everywhere_ext
 
 - name: "Add policy setting used to install extensions via extension IDs"
