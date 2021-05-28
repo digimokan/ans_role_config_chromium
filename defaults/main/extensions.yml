@@ -4,6 +4,6 @@ install_https_everywhere_ext: true
 # install and enable the uBlock Origin browser extension
 install_ublock_origin_ext: true
 
-# install and enable the Surfingkeys browser extension
-install_surfingkeys_ext: true
+# install and enable the Vimium browser extension
+install_vimium_ext: true
 
