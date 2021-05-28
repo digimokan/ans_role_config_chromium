@@ -27,6 +27,17 @@
     ext_id: ' "dbepggeogbaibhgnhhndojpepiihcmeb"'
   when: install_vimium_ext
 
+- name: "Add vimium config file, at '{{ vimium_config_file_path }}'"
+  ansible.builtin.template:
+    dest: "{{ vimium_config_file_path }}"
+    src: 'vimium_config.j2'
+    owner: 'root'
+    group: 'root'
+    mode: '644'
+    force: yes
+  become: true
+  become_user: root
+
 - name: "Add policy setting used to install extensions via extension IDs"
   ansible.builtin.include_tasks: func/edit_array_policy.yml
   vars:
