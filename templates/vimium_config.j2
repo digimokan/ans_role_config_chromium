@@ -6,6 +6,7 @@
   "grabBackFocus": true,
   "linkHintCharacters": "asdfghjkl",
   "newTabUrl": "{{ home_page if (home_page) else 'about:newtab' }}",
+  "searchUrl": "{{ search_providers | first | map(attribute='search_url') }}",
   "searchUrl": "{{ search_providers[0].search_url }}",
   "searchEngines": "w: https://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia\n",
   "searchEngines": "{{ search_providers | map(attribute='search_url') | join('\\n ') }}",
