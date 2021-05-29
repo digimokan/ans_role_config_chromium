@@ -16,3 +16,35 @@ search_providers:
   - { provider_name: 'Wikipedia', hotkeys: 'w', search_url: 'https://en.wikipedia.org/?search=%s' }
   - { provider_name: 'YouTube', hotkeys: 'y', search_url: 'https://www.youtube.com/results?search_query=%s' }
 
+# keymaps used by Vimium extension
+vimium_keymaps:
+  - { keys: 'j', action: 'scrollDown' }
+  - { keys: 'k', action: 'scrollUp' }
+  - { keys: 'gg', action: 'scrollToTop' }
+  - { keys: 'G', action: 'scrollToBottom' }
+  - { keys: 'H', action: 'scrollLeft' }
+  - { keys: 'L', action: 'scrollRight' }
+  - { keys: ',', action: 'previousTab' }
+  - { keys: '.', action: 'nextTab' }
+  - { keys: 'h', action: 'goBack' }
+  - { keys: 'l', action: 'goForward' }
+  - { keys: '[', action: 'goPrevious' }
+  - { keys: ']', action: 'goNext' }
+  - { keys: 'r', action: 'reload' }
+  - { keys: 'o', action: 'Vomnibar.activate' }
+  - { keys: 'O', action: 'Vomnibar.activateEditUrl' }
+  - { keys: 't', action: 'Vomnibar.activateInNewTab' }
+  - { keys: 'gu', action: 'goUp' }
+  - { keys: 'gr', action: 'goToRoot' }
+  - { keys: '/', action: 'enterFindMode' }
+  - { keys: 'n', action: 'performFind' }
+  - { keys: 'N', action: 'performBackwardsFind' }
+  - { keys: 'x', action: 'removeTab' }
+  - { keys: 'yt', action: 'duplicateTab' }
+  - { keys: '<', action: 'moveTabLeft' }
+  - { keys: '>', action: 'moveTabRight' }
+  - { keys: 'X', action: 'restoreTab' }
+  - { keys: 'f', action: 'LinkHints.activateMode' }
+  - { keys: 'F', action: 'LinkHints.activateModeToOpenInNewForegroundTab' }
+  - { keys: 'yy', action: 'copyCurrentUrl' }
+
