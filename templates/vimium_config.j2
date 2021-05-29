@@ -6,10 +6,7 @@
   "grabBackFocus": true,
   "linkHintCharacters": "asdfghjkl",
   "newTabUrl": "{{ home_page if (home_page) else 'about:newtab' }}",
-  "searchUrl": "{{ search_providers | first | map(attribute='search_url') }}",
   "searchUrl": "{{ search_providers[0].search_url }}",
-  "searchEngines": "w: https://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia\n",
-  "searchEngines": "{{ search_providers | map(attribute='search_url') | join('\\n ') }}",
   "searchEngines": "{% for provider in search_providers %}{{ provider.hotkeys }}: {{ provider.search_url }}\n {% endfor %}",
   "keyMappings": "\nmap j scrollDown \nmap k scrollUp \nmap H scrollLeft \nmap L scrollRight \nmap , previousTab \nmap . nextTab \nmap h goBack \nmap l goForward \nmap [ goPrevious \nmap ] goNext \nmap r reload \nmap o Vomnibar.activate \nmap O Vomnibar.activateEditUrl \nmap t Vomnibar.activateInNewTab \nmap gu goUp \nmap gr goUp \nmap / enterFindMode \nmap n performFind \nmap N performBackwardsFind \nmap x removeTab \nmap yt duplicateTab \nmap yt duplicateTab \nmap < moveTabLeft \nmap > moveTabRight \nmap X restoreTab \nmap f LinkHints.activateMode \nmap F LinkHints.activateModeToOpenInNewForegroundTab \nmap yy copyCurrentUrl",
   "exclusionRules": [
