@@ -4,7 +4,7 @@
     policy_name: "HomepageLocation"
     string_value: "{{ home_page }}"
     last_entry: true
-  when: not (home_page)
+  when: (home_page)
 
 - name: "Set use-menu-page-as-home-page to '{{ boolean_value }}'"
   ansible.builtin.include_tasks: func/edit_bool_policy.yml
