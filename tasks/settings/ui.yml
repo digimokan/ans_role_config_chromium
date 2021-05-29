@@ -6,10 +6,9 @@
     last_entry: true
   when: not (home_page)
 
-- name: "Set use-menu-page-as-home-page to '{{ use_menu_page_as_home_page }}'"
+- name: "Set use-menu-page-as-home-page to '{{ bool_value }}'"
   ansible.builtin.include_tasks: func/edit_bool_policy.yml
   vars:
     policy_name: "HomepageIsNewTabPage"
-    bool_value: "{{ use_menu_page_as_home_page }}"
-    use_menu_page_as_home_page: not (home_page)
+    bool_value: "{{ not (home_page) }}"
 
