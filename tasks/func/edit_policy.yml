@@ -10,6 +10,7 @@
     create: no
   vars:
     locked: false
+    # NOTE: always use last_entry - once - for locked and overridable configs
     last_entry: false
   become: true
   become_user: root
