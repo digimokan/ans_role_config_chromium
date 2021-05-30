@@ -1,5 +1,4 @@
-- name: "Set Chromium policy '{{ policy_name }}' to array elements '{{ array_element_list }}'"
-  ansible.builtin.include_tasks: edit_policy.yml
+- ansible.builtin.include_tasks: edit_policy.yml
   vars:
     # Note: leading space before the '[' prevents ansible python quote bug:
     # See https://stackoverflow.com/questions/31969872/why-ansible-always-replaces-double-quotes-with-single-quotes-in-templates
