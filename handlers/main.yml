@@ -1,0 +1,3 @@
+- ansible.builtin.include_tasks: func/warn_vimium_manual_config.yml
+  listen: warn-vimium-manual-config
+
