@@ -8,6 +8,6 @@
   "newTabUrl": "{{ home_page if (home_page) else 'about:newtab' }}",
   "searchUrl": "{{ search_providers[0].search_url }}",
   "searchEngines": "{% for provider in search_providers %}{{ provider.hotkeys }}: {{ provider.search_url }}\n {% endfor %}",
-  "keyMappings": "{% for keymap in vimium_keymaps %}\nmap {{ keymap.keypress }} {{ keymap.action }} {% endfor %}",
+  "keyMappings": "{% for keymap in vimium_keymaps %}\nmap {{ keymap.keypress }} {{ keymap.action }} {% endfor %}"
 }
 
