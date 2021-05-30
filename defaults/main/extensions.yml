@@ -5,7 +5,7 @@ install_https_everywhere_ext: true
 install_ublock_origin_ext: true
 
 # install and enable the Vimium browser extension
-install_vimium_ext: true
+install_vimium_ext: false
 
 # keymaps used by Vimium extension
 vimium_keymaps:
