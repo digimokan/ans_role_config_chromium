@@ -3,6 +3,7 @@
   vars:
     policy_name: "EnableMediaRouter"
     boolean_value: "{{ enable_builtin_cast_ext }}"
+    locked: true
 
 - name: "Set allow-user-extension-install to '{{ boolean_value }}'"
   ansible.builtin.include_tasks: func/edit_bool_policy.yml
