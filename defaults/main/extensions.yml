@@ -8,7 +8,7 @@ install_ublock_origin_ext: true
 install_vimium_ext: false
 
 # allow user to install extensions
-allow_user_ext_install: true
+allow_user_ext_install: false
 
 # keymaps used by Vimium extension
 vimium_keymaps:
