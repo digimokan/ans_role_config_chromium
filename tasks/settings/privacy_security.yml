@@ -5,3 +5,10 @@
     numeric_value: "{{ 2 if block_desktop_notfications else 3 }}"
     descrip_value: "{{ 'always' if block_desktop_notfications else 'ask' }}"
 
+- name: "Set block-pop-ups to '{{ descrip_value }}'"
+  ansible.builtin.include_tasks: func/edit_numeric_policy.yml
+  vars:
+    policy_name: "DefaultNotificationsSetting"
+    numeric_value: "{{ 2 if block_pop_ups else 1 }}"
+    descrip_value: "{{ 'always' if block_pop_ups else 'never' }}"
+
