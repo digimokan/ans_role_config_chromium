@@ -2,5 +2,5 @@
 block_desktop_notfications: true
 
 # block sites from displaying pop-ups (if false, always allow)
-block_pop_ups: false
+block_pop_ups: true
 
