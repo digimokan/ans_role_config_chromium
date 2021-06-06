@@ -4,6 +4,9 @@ install_https_everywhere_ext: true
 # install and enable the uBlock Origin browser extension
 install_ublock_origin_ext: true
 
+# enable the builtin "Google Cast" extension, for Chromecast device support
+enable_builtin_cast_ext: false
+
 # install and enable the Vimium browser extension
 install_vimium_ext: false
 
