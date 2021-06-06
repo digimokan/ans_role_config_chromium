@@ -6,10 +6,10 @@
     locked: true
 
 - name: "Set extension-install-blocklist to 'ALL'"
-  ansible.builtin.include_tasks: func/edit_string_policy.yml
+  ansible.builtin.include_tasks: func/edit_array_policy.yml
   vars:
     policy_name: "ExtensionInstallBlocklist"
-    string_value: "*"
+    array_element_list: [ '*' ]
     locked: true
   when: not allow_user_ext_install
 
