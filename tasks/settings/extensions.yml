@@ -5,19 +5,11 @@
     boolean_value: "{{ not allow_user_ext_install }}"
     locked: true
 
-- name: "Set extension-install-blocklist to 'ALL'"
+- name: "Set extension-install-blocklist to '{{ descrip_value }}'"
   ansible.builtin.include_tasks: func/edit_array_policy.yml
   vars:
     policy_name: "ExtensionInstallBlocklist"
-    array_element_list: [ ' "*"' ]
+    array_element_list: [] if allow_user_ext_install else [ ' "*"' ]
+    descrip_value: "{{ 'ALL' if allow_user_ext_install else 'NONE' }}"
     locked: true
-  when: not allow_user_ext_install
-
-- name: "Set extension-install-blocklist to 'NONE'"
-  ansible.builtin.include_tasks: func/edit_array_policy.yml
-  vars:
-    policy_name: "ExtensionInstallBlocklist"
-    array_element_list: []
-    locked: true
-  when: allow_user_ext_install
 
