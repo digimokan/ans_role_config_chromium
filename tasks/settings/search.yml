@@ -1,0 +1,6 @@
+- name: "Set enable-search-in-url-bar to '{{ boolean_value }}'"
+  ansible.builtin.include_tasks: func/edit_bool_policy.yml
+  vars:
+    policy_name: "DefaultSearchProviderEnabled"
+    boolean_value: "{{ enable_search_in_url_bar }}"
+

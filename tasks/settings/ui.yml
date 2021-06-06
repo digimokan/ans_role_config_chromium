@@ -11,9 +11,3 @@
     policy_name: "NewTabPageLocation"
     string_value: "{{ home_page if (home_page) else 'about:newtab' }}"
 
-# - name: "Set use-menu-page-as-home-page to '{{ boolean_value }}'"
-#   ansible.builtin.include_tasks: func/edit_bool_policy.yml
-#   vars:
-#     policy_name: "HomepageIsNewTabPage"
-#     boolean_value: "{{ not (home_page) }}"
-

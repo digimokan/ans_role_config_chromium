@@ -1,3 +1,6 @@
+# enable search in url-bar (when user types in non-url text)
+enable_search_in_url_bar: false
+
 # selectable search providers (currently only used by Vimium extension)
 # Note: Vimium will use the first row in this list as the default provider
 search_providers:
