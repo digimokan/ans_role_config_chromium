@@ -9,7 +9,7 @@
   ansible.builtin.include_tasks: func/edit_array_policy.yml
   vars:
     policy_name: "ExtensionInstallBlocklist"
-    array_element_list: [] if allow_user_ext_install else [ ' "*"' ]
+    array_element_list: "{{ [] if allow_user_ext_install else [ ' "*"' ] }}"
     descrip_value: "{{ 'ALL' if allow_user_ext_install else 'NONE' }}"
     locked: true
 
