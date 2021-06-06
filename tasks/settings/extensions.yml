@@ -2,5 +2,5 @@
   ansible.builtin.include_tasks: func/edit_bool_policy.yml
   vars:
     policy_name: "BlockExternalExtensions"
-    boolean_value: "{{ allow_user_ext_install }}"
+    boolean_value: "{{ not allow_user_ext_install }}"
 
