@@ -4,3 +4,17 @@
     policy_name: "BlockExternalExtensions"
     boolean_value: "{{ not allow_user_ext_install }}"
 
+- name: "Set extension-install-blocklist to 'ALL'"
+  ansible.builtin.include_tasks: func/edit_string_policy.yml
+  vars:
+    policy_name: "ExtensionInstallBlocklist"
+    string_value: "*"
+  when: not allow_user_ext_install
+
+- name: "Set extension-install-blocklist to 'NONE'"
+  ansible.builtin.include_tasks: func/edit_array_policy.yml
+  vars:
+    policy_name: "ExtensionInstallBlocklist"
+    array_element_list: []
+  when: allow_user_ext_install
+
