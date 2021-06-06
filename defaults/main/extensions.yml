@@ -7,6 +7,9 @@ install_ublock_origin_ext: true
 # install and enable the Vimium browser extension
 install_vimium_ext: false
 
+# allow user to install extensions
+allow_user_ext_install: false
+
 # keymaps used by Vimium extension
 vimium_keymaps:
   - { keypress: 'j', action: 'scrollDown' }
