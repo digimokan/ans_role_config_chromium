@@ -1,10 +1,7 @@
-# enable search in url-bar (when user types in non-url text)
-enable_search_in_url_bar: true
-
 # selectable search providers (currently only used by Vimium extension)
 # Note: Vimium will use the first row in this list as the default provider
 search_providers:
-  - { provider_name: 'DuckDuckGo', hotkeys: 'd', search_url: 'https://duckduckgo.com/?q={searchTerms}' }
+  - { provider_name: 'DuckDuckGo', hotkeys: 'd', search_url: 'https://duckduckgo.com/?q=%s' }
   - { provider_name: 'Amazon', hotkeys: 'a', search_url: 'https://www.amazon.com/s/ref=nb_sb_noss_1?url=search-alias%3Daps&field-keywords=%s' }
   - { provider_name: 'ArchWiki', hotkeys: 'aw', search_url: 'https://wiki.archlinux.org/?search=%s' }
   - { provider_name: 'CppReference', hotkeys: 'c', search_url: 'https://en.cppreference.com/?search=%s' }
