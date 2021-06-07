@@ -11,3 +11,10 @@
     policy_name: "NewTabPageLocation"
     string_value: "{{ home_page if (home_page) else 'about:newtab' }}"
 
+- name: "Set allow-system-notifications to '{{ boolean_value }}'"
+  ansible.builtin.include_tasks: func/edit_bool_policy.yml
+  vars:
+    policy_name: "AllowSystemNotifications"
+    boolean_value: "{{ allow_system_notifications }}"
+    locked: true
+

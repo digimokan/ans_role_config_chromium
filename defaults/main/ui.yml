@@ -1,3 +1,6 @@
 # home page for new tabs, and using "home" button (set '' to use menu-page)
 home_page: 'https://www.duckduckgo.com'
 
+# allow Chromium to use the host system to show notifications
+allow_system_notifications: false
+
