@@ -19,3 +19,10 @@
     boolean_value: "{{ auto_fill_postal_addresses }}"
     locked: true
 
+- name: "Set auto-fill-credit-card-data to '{{ boolean_value }}'"
+  ansible.builtin.include_tasks: func/edit_bool_policy.yml
+  vars:
+    policy_name: "AutofillCreditCardEnabled"
+    boolean_value: "{{ auto_fill_credit_card_data }}"
+    locked: true
+
