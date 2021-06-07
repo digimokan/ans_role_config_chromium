@@ -18,3 +18,10 @@
     boolean_value: "{{ allow_system_notifications }}"
     locked: true
 
+- name: "Set use-external-pdf-viewer to '{{ boolean_value }}'"
+  ansible.builtin.include_tasks: func/edit_bool_policy.yml
+  vars:
+    policy_name: "AlwaysOpenPdfExternally"
+    boolean_value: "{{ use_ext_pdf_viewer }}"
+    locked: true
+

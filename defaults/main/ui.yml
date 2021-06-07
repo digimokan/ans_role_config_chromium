@@ -4,3 +4,6 @@ home_page: 'https://www.duckduckgo.com'
 # allow Chromium to use the host system to show notifications
 allow_system_notifications: false
 
+# Download pdfs, and use external app to view (if false, use builtin viewer)
+use_ext_pdf_viewer: false
+
