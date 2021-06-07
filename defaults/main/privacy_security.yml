@@ -4,3 +4,6 @@ block_desktop_notfications: true
 # block sites from displaying pop-ups (if false, always allow)
 block_pop_ups: true
 
+# save and auto-fill postal addresses that user enters into web forms
+auto_fill_postal_addresses: false
+

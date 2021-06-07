@@ -12,3 +12,9 @@
     numeric_value: "{{ 2 if block_pop_ups else 1 }}"
     descrip_value: "{{ 'always' if block_pop_ups else 'never' }}"
 
+- name: "Set auto-fill-postal-addresses to '{{ boolean_value }}'"
+  ansible.builtin.include_tasks: func/edit_bool_policy.yml
+  vars:
+    policy_name: "AutofillAddressEnabled"
+    boolean_value: "{{ auto_fill_postal_addresses }}"
+
