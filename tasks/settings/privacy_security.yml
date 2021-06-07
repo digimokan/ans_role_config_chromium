@@ -17,4 +17,5 @@
   vars:
     policy_name: "AutofillAddressEnabled"
     boolean_value: "{{ auto_fill_postal_addresses }}"
+    locked: true
 
