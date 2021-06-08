@@ -30,4 +30,5 @@
   vars:
     policy_name: "BookmarkBarEnabled"
     boolean_value: "{{ show_bookmarks_bar }}"
+    locked: true
 
