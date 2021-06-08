@@ -25,3 +25,9 @@
     boolean_value: "{{ use_ext_pdf_viewer }}"
     locked: true
 
+- name: "Set show-bookmarks-bar to '{{ boolean_value }}'"
+  ansible.builtin.include_tasks: func/edit_bool_policy.yml
+  vars:
+    policy_name: "BookmarkBarEnabled"
+    boolean_value: "{{ show_bookmarks_bar }}"
+
