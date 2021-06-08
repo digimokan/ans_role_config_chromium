@@ -8,5 +8,5 @@ allow_system_notifications: false
 use_ext_pdf_viewer: false
 
 # Show a horizontal bookmarks bar, at the top of the Chromium window
-show_bookmarks_bar: false
+show_bookmarks_bar: true
 
