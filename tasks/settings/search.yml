@@ -1,0 +1,6 @@
+- name: "Set show-search-suggestions-in-url-bar to '{{ boolean_value }}'"
+  ansible.builtin.include_tasks: func/edit_bool_policy.yml
+  vars:
+    policy_name: "SearchSuggestEnabled"
+    boolean_value: "{{ show_search_suggestions_in_url_bar }}"
+
