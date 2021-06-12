@@ -16,3 +16,6 @@ show_add_user_button: false
 # show "guest login" button in the top right user menu
 show_guest_login_button: false
 
+# show "browser labs" features icon in toolbar
+show_browser_labs_features: false
+
