@@ -47,3 +47,10 @@
     boolean_value: "{{ check_if_default_browser }}"
     locked: true
 
+- name: "Set enable-browser-metrics-reporting to '{{ boolean_value }}'"
+  ansible.builtin.include_tasks: func/edit_bool_policy.yml
+  vars:
+    policy_name: "MetricsReportingEnabled"
+    boolean_value: "{{ enable_browser_metrics_reporting }}"
+    locked: true
+

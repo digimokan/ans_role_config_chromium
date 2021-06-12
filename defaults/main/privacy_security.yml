@@ -19,3 +19,6 @@ use_dns_over_https: false
 # check if Chromium is the default OS browser
 check_if_default_browser: false
 
+# report browser usage and crash-reporting data to Google
+enable_browser_metrics_reporting: false
+
