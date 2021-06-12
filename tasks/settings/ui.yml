@@ -46,3 +46,10 @@
     boolean_value: "{{ show_guest_login_button }}"
     locked: true
 
+- name: "Set show-browser-labs-features to '{{ boolean_value }}'"
+  ansible.builtin.include_tasks: func/edit_bool_policy.yml
+  vars:
+    policy_name: "BrowserLabsEnabled"
+    boolean_value: "{{ show_browser_labs_features }}"
+    locked: true
+
