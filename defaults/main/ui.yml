@@ -2,7 +2,7 @@
 home_page: 'https://www.duckduckgo.com'
 
 # on startup, show restored tabs from last session (if false, show home page)
-show_restored_tabs_on_startup: false
+show_restored_tabs_on_startup: true
 
 # allow Chromium to use the host system to show notifications
 allow_system_notifications: false
