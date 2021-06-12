@@ -3,6 +3,7 @@
 
 - ansible.builtin.include_tasks: extensions.yml
 - ansible.builtin.include_tasks: privacy_security.yml
+- ansible.builtin.include_tasks: search.yml
 - ansible.builtin.include_tasks: ui.yml
 - ansible.builtin.include_tasks: update.yml
 
