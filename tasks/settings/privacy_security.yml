@@ -33,6 +33,13 @@
     boolean_value: "{{ use_builtin_dns_client }}"
     locked: true
 
+- name: "Set use-dns-over-https to '{{ string_value }}'"
+  ansible.builtin.include_tasks: func/edit_string_policy.yml
+  vars:
+    policy_name: "DnsOverHttpsMode"
+    string_value: "{{ 'automatic' if use_dns_over_https else 'off' }}"
+    locked: true
+
 - name: "Set check-if-default-browser to '{{ boolean_value }}'"
   ansible.builtin.include_tasks: func/edit_bool_policy.yml
   vars:

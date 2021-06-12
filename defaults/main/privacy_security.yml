@@ -13,6 +13,9 @@ auto_fill_credit_card_data: false
 # use Chromium-builtin DNS client (if false, use OS's DNS client)
 use_builtin_dns_client: false
 
+# use Chromium-builtin DNS client (if false, use OS's DNS client)
+use_dns_over_https: false
+
 # check if Chromium is the default OS browser
 check_if_default_browser: false
 
