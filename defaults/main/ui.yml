@@ -19,3 +19,6 @@ show_guest_login_button: false
 # show "browser labs" features icon in toolbar
 show_browser_labs_features: false
 
+# show full urls (including subdomains, slashes, etc) in url-bar
+show_full_urls_in_url_bar: true
+
