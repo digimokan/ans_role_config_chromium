@@ -5,6 +5,13 @@
     string_value: "{{ home_page if (home_page) else 'about:newtab' }}"
     last_entry: true
 
+- name: "Set restore-on-startup to '{{ descrip_value }}'"
+  ansible.builtin.include_tasks: func/edit_numeric_policy.yml
+  vars:
+    policy_name: "RestoreOnStartup"
+    numeric_value: "{{ 1 if show_restored_tabs_on_startup else 5 }}"
+    descrip_value: "{{ 'tabs-from-last-session' if show_restored_tabs_on_startup else 'show-home-page' }}"
+
 - name: "Set the new-tab page to '{{ string_value }}'"
   ansible.builtin.include_tasks: func/edit_string_policy.yml
   vars:
