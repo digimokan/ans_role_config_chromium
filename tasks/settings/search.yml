@@ -3,4 +3,5 @@
   vars:
     policy_name: "SearchSuggestEnabled"
     boolean_value: "{{ show_search_suggestions_in_url_bar }}"
+    locked: true
 
