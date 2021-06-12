@@ -10,3 +10,6 @@ auto_fill_postal_addresses: true
 # save and auto-fill credit card data that user enters into web forms
 auto_fill_credit_card_data: false
 
+# use Chromium-builtin DNS client (if false, use OS's DNS client)
+use_builtin_dns_client: false
+
