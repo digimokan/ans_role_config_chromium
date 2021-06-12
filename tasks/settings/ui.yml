@@ -3,7 +3,6 @@
   vars:
     policy_name: "HomepageLocation"
     string_value: "{{ home_page if (home_page) else 'about:newtab' }}"
-    last_entry: true
 
 - name: "Set restore-on-startup to '{{ descrip_value }}'"
   ansible.builtin.include_tasks: func/edit_numeric_policy.yml

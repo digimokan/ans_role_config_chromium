@@ -19,6 +19,14 @@
   become: true
   become_user: root
 
+# Note: add this 'last_entry' setting first, for json file comma-correctness
+- name: "Initialize overridable config file with last comma-less entry"
+  ansible.builtin.include_tasks: func/edit_bool_policy.yml
+  vars:
+    policy_name: "AllowDinosaurEasterEgg"
+    boolean_value: false
+    last_entry: true
+
 - name: "Create the locked config dir, at {{ locked_config_file_path | dirname }}"
   ansible.builtin.file:
     path: "{{ locked_config_file_path | dirname }}"
@@ -39,4 +47,13 @@
     force: no
   become: true
   become_user: root
+
+# Note: add this 'last_entry' setting first, for json file comma-correctness
+- name: "Initialize locked config file with last comma-less entry"
+  ansible.builtin.include_tasks: func/edit_numeric_policy.yml
+  vars:
+    policy_name: "PolicyRefreshRate"
+    numeric_value: 10800000
+    locked: true
+    last_entry: true
 
