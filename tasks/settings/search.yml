@@ -16,22 +16,26 @@
   vars:
     policy_name: "DefaultSearchProviderSearchURL"
     string_value: "{{ default_search_url }}"
+    locked: true
 
 - name: "Set default-search-provider-suggest-url to '{{ string_value }}'"
   ansible.builtin.include_tasks: func/edit_string_policy.yml
   vars:
     policy_name: "DefaultSearchProviderSuggestURL"
     string_value: "{{ default_search_url }}"
+    locked: true
 
 - name: "Set default-search-provider-name to '{{ string_value }}'"
   ansible.builtin.include_tasks: func/edit_string_policy.yml
   vars:
     policy_name: "DefaultSearchProviderName"
     string_value: "{{ search_providers[0].provider_name }}"
+    locked: true
 
 - name: "Set default-search-provider-hotkeys to '{{ string_value }}'"
   ansible.builtin.include_tasks: func/edit_string_policy.yml
   vars:
     policy_name: "DefaultSearchProviderKeyword"
     string_value: "{{ search_providers[0].hotkeys }}"
+    locked: true
 
