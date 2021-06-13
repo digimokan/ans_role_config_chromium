@@ -13,6 +13,9 @@ use_ext_pdf_viewer: false
 # Show a horizontal bookmarks bar, at the top of the Chromium window
 show_bookmarks_bar: false
 
+# show a "home" button, to load the home page in the current tab
+show_home_button: false
+
 # show "add user profile" button in the top right user menu
 show_add_user_button: false
 
