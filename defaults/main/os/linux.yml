@@ -1,0 +1,12 @@
+# SEE CHROMIUM PROJECT NOTES:
+#   https://www.chromium.org/administrators/linux-quick-start
+
+# chromium config (aka 'Policy') file, system-wide and overridable
+linux_overridable_config_file_path: '/etc/chromium/policies/recommended/ansible_policies.json'
+
+# chromium config (aka 'Policy') file, system-wide and locked
+linux_locked_config_file_path: '/etc/chromium/policies/managed/ansible_policies.json'
+
+# vimium extension config file (see install limitations noted in config file)
+linux_vimium_config_file_path: '/etc/chromium/ansible_vimium.json'
+

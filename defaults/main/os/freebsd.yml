@@ -1,0 +1,12 @@
+# SEE CHROMIUM PROJECT NOTES:
+#   https://www.chromium.org/administrators/linux-quick-start
+
+# chromium config (aka 'Policy') file, system-wide and overridable
+freebsd_overridable_config_file_path: '/usr/local/etc/chrome/policies/recommended/ansible_policies.json'
+
+# chromium config (aka 'Policy') file, system-wide and locked
+freebsd_locked_config_file_path: '/usr/local/etc/chrome/policies/managed/ansible_policies.json'
+
+# vimium extension config file (see install limitations noted in config file)
+freebsd_vimium_config_file_path: '/usr/local/etc/chrome/ansible_vimium.json'
+

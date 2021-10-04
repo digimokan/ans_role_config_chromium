@@ -1,7 +1,0 @@
-- name: "Install main 'chromium' package"
-  community.general.pacman:
-    name: chromium
-    state: present
-  become: true
-  become_user: root
-

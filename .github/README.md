@@ -22,7 +22,8 @@ Install and configure the Chromium browser.
 
 ## Supported Operating Systems
 
-* Arch Linux.
+* Arch Linux
+* FreeBSD
 
 ## Quick Start
 
