@@ -1,4 +1,5 @@
 - ansible.builtin.include_tasks: edit_policy.yml
   vars:
-    policy_value: "\"{{ string_value }}\""
+    # policy_value: "\"{{ string_value }}\""
+    policy_value: "{{ string_value | to_json }}"
 
