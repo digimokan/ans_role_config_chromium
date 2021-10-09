@@ -1,5 +1,6 @@
-# FOR DEFS OF ALL SETTINGS, SEE CHROME POLICY PAGE:
+# FOR DEFS OF ALL SETTINGS, SEE CHROME POLICY PAGES:
 #   https://chromeenterprise.google/policies/
+#   https://src.chromium.org/viewvc/chrome/trunk/src/chrome/common/pref_names.cc?view=markup
 # TO VIEW ALL CURRENT ACTIVE POLICTY SETTINGS:
 #   chrome://policy
 
