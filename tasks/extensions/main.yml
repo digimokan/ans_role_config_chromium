@@ -8,21 +8,21 @@
 
 - name: "Install https-everywhere extension via policy: {{ install_https_everywhere_ext }}"
   ansible.builtin.set_fact:
-    extension_ids: "{{ extension_ids + [ ext_id | to_json ] }}"
+    extension_ids: "{{ extension_ids + [ ext_id ] }}"
   vars:
     ext_id: 'gcbommkclmclpchllfjekcdonpmejbdp'
   when: install_https_everywhere_ext
 
 - name: "Install ublock-origin extension via policy: {{ install_ublock_origin_ext }}"
   ansible.builtin.set_fact:
-    extension_ids: "{{ extension_ids + [ ext_id | to_json ] }}"
+    extension_ids: "{{ extension_ids + [ ext_id ] }}"
   vars:
     ext_id: 'cjpalhdlnbpafiamejdnhcphjbkeiagm'
   when: install_ublock_origin_ext
 
 - name: "Install vimium extension via policy: {{ install_vimium_ext }}"
   ansible.builtin.set_fact:
-    extension_ids: "{{ extension_ids + [ ext_id | to_json ] }}"
+    extension_ids: "{{ extension_ids + [ ext_id ] }}"
   vars:
     ext_id: 'dbepggeogbaibhgnhhndojpepiihcmeb'
   when: install_vimium_ext
