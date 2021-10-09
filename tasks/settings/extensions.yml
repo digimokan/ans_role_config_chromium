@@ -19,6 +19,6 @@
     array_element_list: "{{ all_value if allow_user_ext_install else none_value }}"
     descrip_value: "{{ 'NONE' if allow_user_ext_install else 'ALL' }}"
     all_value: []
-    none_value: [ ' "*"' ]
+    none_value: [ " \"*\"" ]
     locked: true
 

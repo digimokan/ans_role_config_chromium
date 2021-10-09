@@ -1,5 +1,7 @@
 # FOR DEFS OF ALL SETTINGS, SEE CHROME POLICY PAGE:
 #   https://chromeenterprise.google/policies/
+# TO VIEW ALL CURRENT ACTIVE POLICTY SETTINGS:
+#   chrome://policy
 
 - ansible.builtin.include_tasks: extensions.yml
 - ansible.builtin.include_tasks: privacy_security.yml
