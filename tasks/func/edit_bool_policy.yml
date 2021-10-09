@@ -1,5 +1,5 @@
 - ansible.builtin.include_tasks: edit_policy.yml
   vars:
     # policy_value: "{{ 'true' if boolean_value else 'false' }}"
-    policy_value: "{{ boolean_value | to_json }}"
+    policy_value: "{{ boolean_value | bool | to_json }}"
 
