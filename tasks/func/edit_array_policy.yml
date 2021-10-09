@@ -2,6 +2,7 @@
   vars:
     # Note: leading space before '[' in conv prevents ansible python quote bug:
     # See https://stackoverflow.com/questions/31969872/why-ansible-always-replaces-double-quotes-with-single-quotes-in-templates
-    policy_value: "{{ array_conv | regex_replace('^ (.*)$', '\\1') }}"
-    array_conv: " [{{ array_element_list | join(',') }} ]"
+    policy_value: "[{{ array_element_list | join(', ') }}]"
+    # policy_value: "{{ array_conv | regex_replace('^ (.*)$', '\\1') }}"
+    # array_conv: " [{{ array_element_list | join(',') }} ]"
 

@@ -10,21 +10,21 @@
   ansible.builtin.set_fact:
     extension_ids: "{{ extension_ids + [ ext_id | to_json ] }}"
   vars:
-    ext_id: " \"gcbommkclmclpchllfjekcdonpmejbdp\""
+    ext_id: 'gcbommkclmclpchllfjekcdonpmejbdp'
   when: install_https_everywhere_ext
 
 - name: "Install ublock-origin extension via policy: {{ install_ublock_origin_ext }}"
   ansible.builtin.set_fact:
     extension_ids: "{{ extension_ids + [ ext_id | to_json ] }}"
   vars:
-    ext_id: " \"cjpalhdlnbpafiamejdnhcphjbkeiagm\""
+    ext_id: 'cjpalhdlnbpafiamejdnhcphjbkeiagm'
   when: install_ublock_origin_ext
 
 - name: "Install vimium extension via policy: {{ install_vimium_ext }}"
   ansible.builtin.set_fact:
     extension_ids: "{{ extension_ids + [ ext_id | to_json ] }}"
   vars:
-    ext_id: " \"dbepggeogbaibhgnhhndojpepiihcmeb\""
+    ext_id: 'dbepggeogbaibhgnhhndojpepiihcmeb'
   when: install_vimium_ext
 
 - name: "Add vimium config file, at '{{ vimium_config_file_path }}'"
