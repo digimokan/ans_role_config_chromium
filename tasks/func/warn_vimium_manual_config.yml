@@ -1,6 +1,4 @@
 - name: "Warn user that vimium config must be manually loaded"
   ansible.builtin.debug:
-    msg: "WARNING: chromium Vimium extension config changed. Load {{ file_path }} in the browser."
-  vars:
-    file_path: "{{ vimium_config_file_path }}"
+    msg: "WARNING: chromium Vimium extension config changed. Load 'vimium_config.json' in the browser."
 
