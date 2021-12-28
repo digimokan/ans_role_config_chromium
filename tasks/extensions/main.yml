@@ -28,12 +28,8 @@
   when: install_vimium_ext
 
 - name: "Pull in browser_search_providers from dependency role"
-  ansible.builtin.include_role:
+  ansible.builtin.import_role:
     name: ans_role_vars_browser_search_providers
-
-- name: "Set search_providers for this role"
-  set_fact:
-    search_providers: "{{ browser_search_providers }}"
 
 - name: "Add vimium config file, at '{{ vimium_config_file_path }}'"
   ansible.builtin.template:
