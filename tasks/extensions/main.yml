@@ -27,6 +27,10 @@
     ext_id: 'dbepggeogbaibhgnhhndojpepiihcmeb'
   when: install_vimium_ext
 
+- name: "Pull in browser_search_providers from dependency role"
+  ansible.builtin.include_role:
+    name: ans_role_vars_browser_search_providers
+
 - name: "Add vimium config file, at '{{ vimium_config_file_path }}'"
   ansible.builtin.template:
     dest: "{{ vimium_config_file_path }}"
