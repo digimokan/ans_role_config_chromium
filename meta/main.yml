@@ -12,4 +12,6 @@ galaxy_info:
     - freebsd
     - browser
     - chromium
+  dependencies:
+    - role: ans_role_vars_browser_search_providers
 
