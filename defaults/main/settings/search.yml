@@ -3,19 +3,5 @@ show_search_suggestions_in_url_bar: true
 
 # selectable search providers (currently only used by Vimium extension)
 # Note: Vimium will use the first row in this list as the default provider
-search_providers:
-  - { provider_name: 'DuckDuckGo', hotkeys: 'd', search_url: 'https://duckduckgo.com/?q=%s' }
-  - { provider_name: 'Amazon', hotkeys: 'a', search_url: 'https://www.amazon.com/s/ref=nb_sb_noss_1?url=search-alias%3Daps&field-keywords=%s' }
-  - { provider_name: 'ArchWiki', hotkeys: 'aw', search_url: 'https://wiki.archlinux.org/?search=%s' }
-  - { provider_name: 'CppReference', hotkeys: 'c', search_url: 'https://en.cppreference.com/?search=%s' }
-  - { provider_name: 'CPlusPlus', hotkeys: 'cp', search_url: 'http://www.cplusplus.com/search.do?q=%s' }
-  - { provider_name: 'eBay', hotkeys: 'e', search_url: 'https://ebay.com/sch/%s' }
-  - { provider_name: 'FreeBSD Man Pages', hotkeys: 'man', search_url: 'https://www.freebsd.org/cgi/man.cgi?query=%s' }
-  - { provider_name: 'GitHub', hotkeys: 'gh', search_url: 'https://github.com/search?q=%s' }
-  - { provider_name: 'Google', hotkeys: 'g', search_url: 'https://www.google.com/search?hl=en&q=%s' }
-  - { provider_name: 'Quora', hotkeys: 'q', search_url: 'https://www.quora.com/search?q=%s' }
-  - { provider_name: 'Reddit', hotkeys: 'r', search_url: 'https://www.reddit.com/search?q=%s' }
-  - { provider_name: 'Stack Overflow', hotkeys: 's', search_url: 'https://www.stackoverflow.com/search?q=%s' }
-  - { provider_name: 'Wikipedia', hotkeys: 'w', search_url: 'https://en.wikipedia.org/?search=%s' }
-  - { provider_name: 'YouTube', hotkeys: 'y', search_url: 'https://www.youtube.com/results?search_query=%s' }
+search_providers: "{{ browser_search_providers }}"
 
