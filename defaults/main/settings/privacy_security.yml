@@ -16,6 +16,9 @@ auto_fill_passwords: false
 # use Chromium-builtin DNS client (if false, use OS's DNS client)
 use_builtin_dns_client: false
 
+# enable https-only-mode for browsing, and warn for http pages
+enable_https_only_mode: true
+
 # use Chromium-builtin DNS client (if false, use OS's DNS client)
 use_dns_over_https: false
 
