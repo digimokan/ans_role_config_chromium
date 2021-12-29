@@ -1,16 +1,16 @@
 - name: "Run all role tasks for Linux"
   ansible.builtin.include_tasks: run_all_tasks.yml
   vars:
-    overridable_config_file_path: "{{ linux_overridable_config_file_path }}"
-    locked_config_file_path: "{{ linux_locked_config_file_path }}"
+    os_overridable_config_file_path: "{{ linux_overridable_config_file_path }}"
+    os_locked_config_file_path: "{{ linux_locked_config_file_path }}"
     os_vimium_config_file_path: "{{ linux_vimium_config_file_path }}"
   when: ansible_system == "Linux"
 
 - name: "Run all role tasks for FreeBSD"
   ansible.builtin.include_tasks: run_all_tasks.yml
   vars:
-    overridable_config_file_path: "{{ freebsd_overridable_config_file_path }}"
-    locked_config_file_path: "{{ freebsd_locked_config_file_path }}"
+    os_overridable_config_file_path: "{{ freebsd_overridable_config_file_path }}"
+    os_locked_config_file_path: "{{ freebsd_locked_config_file_path }}"
     os_vimium_config_file_path: "{{ freebsd_vimium_config_file_path }}"
   when: ansible_os_family == "FreeBSD"
 

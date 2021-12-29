@@ -1,6 +1,6 @@
 - name: "Set Chromium policy '{{ policy_name }}' to {{ policy_value }}"
   ansible.builtin.lineinfile:
-    path: "{{ locked_config_file_path if locked else overridable_config_file_path }}"
+    path: "{{ os_locked_config_file_path if locked else os_overridable_config_file_path }}"
     regexp: >-
       ^  "{{ policy_name }}":
     insertafter: >-

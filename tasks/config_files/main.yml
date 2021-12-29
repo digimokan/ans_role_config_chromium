@@ -1,15 +1,15 @@
-- name: "Create the overridable config dir, at {{ overridable_config_file_path | dirname }}"
+- name: "Create the overridable config dir, at {{ os_overridable_config_file_path | dirname }}"
   ansible.builtin.file:
-    path: "{{ overridable_config_file_path | dirname }}"
+    path: "{{ os_overridable_config_file_path | dirname }}"
     state: directory
     owner: 'root'
     mode: '755'
   become: true
   become_user: root
 
-- name: "Add initial overridable config file, at '{{ overridable_config_file_path }}'"
+- name: "Add initial overridable config file, at '{{ os_overridable_config_file_path }}'"
   ansible.builtin.template:
-    dest: "{{ overridable_config_file_path }}"
+    dest: "{{ os_overridable_config_file_path }}"
     src: 'skel_config.j2'
     owner: 'root'
     mode: '644'
@@ -25,18 +25,18 @@
     boolean_value: false
     last_entry: true
 
-- name: "Create the locked config dir, at {{ locked_config_file_path | dirname }}"
+- name: "Create the locked config dir, at {{ os_locked_config_file_path | dirname }}"
   ansible.builtin.file:
-    path: "{{ locked_config_file_path | dirname }}"
+    path: "{{ os_locked_config_file_path | dirname }}"
     state: directory
     owner: 'root'
     mode: '755'
   become: true
   become_user: root
 
-- name: "Add initial locked config file, at '{{ locked_config_file_path }}'"
+- name: "Add initial locked config file, at '{{ os_locked_config_file_path }}'"
   ansible.builtin.template:
-    dest: "{{ locked_config_file_path }}"
+    dest: "{{ os_locked_config_file_path }}"
     src: 'skel_config.j2'
     owner: 'root'
     mode: '644'
