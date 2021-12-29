@@ -3,7 +3,7 @@
   vars:
     overridable_config_file_path: "{{ linux_overridable_config_file_path }}"
     locked_config_file_path: "{{ linux_locked_config_file_path }}"
-    vimium_config_file_path: "{{ linux_vimium_config_file_path }}"
+    os_vimium_config_file_path: "{{ linux_vimium_config_file_path }}"
   when: ansible_system == "Linux"
 
 - name: "Run all role tasks for FreeBSD"
@@ -11,6 +11,6 @@
   vars:
     overridable_config_file_path: "{{ freebsd_overridable_config_file_path }}"
     locked_config_file_path: "{{ freebsd_locked_config_file_path }}"
-    vimium_config_file_path: "{{ freebsd_vimium_config_file_path }}"
+    os_vimium_config_file_path: "{{ freebsd_vimium_config_file_path }}"
   when: ansible_os_family == "FreeBSD"
 

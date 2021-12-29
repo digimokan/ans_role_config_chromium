@@ -27,6 +27,14 @@
     ext_id: 'dbepggeogbaibhgnhhndojpepiihcmeb'
   when: install_vimium_ext
 
+- name: "Configure the vimium extension"
+  ansible.builtin.include_role:
+    name: ans_role_config_vimium
+  vars:
+    vimium_search_providers: "{{ chromium_search_providers }}"
+    vimium_config_file_path: "{{ os_vimium_config_file_path }}"
+    vimium_home_page: "{{ home_page }}"
+
 - name: "Add vimium config file, at '{{ vimium_config_file_path }}'"
   ansible.builtin.template:
     dest: "{{ vimium_config_file_path }}"
