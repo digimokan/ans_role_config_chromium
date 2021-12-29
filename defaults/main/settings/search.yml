@@ -1,3 +1,10 @@
 # show real-time, debounced search suggestions in url-bar
 show_search_suggestions_in_url_bar: true
 
+# selectable search providers (currently only used by Vimium extension)
+# Note: Vimium will use the first row in this list as the default provider
+chromium_search_providers:
+  - { provider_name: 'DuckDuckGo', hotkeys: 'd', search_url: 'https://duckduckgo.com/?q=%s' }
+  - { provider_name: 'Google', hotkeys: 'g', search_url: 'https://www.google.com/search?hl=en&q=%s' }
+  - { provider_name: 'Wikipedia', hotkeys: 'w', search_url: 'https://en.wikipedia.org/?search=%s' }
+
