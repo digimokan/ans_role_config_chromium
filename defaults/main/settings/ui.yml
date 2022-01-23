@@ -25,3 +25,6 @@ show_browser_labs_features: false
 # show full urls (including subdomains, slashes, etc) in url-bar
 show_full_urls_in_url_bar: true
 
+# On print, use browser print page, instead of opening system-default print dialog
+use_browser_print_page: false
+
