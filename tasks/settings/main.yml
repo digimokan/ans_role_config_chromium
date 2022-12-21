@@ -1,7 +1,7 @@
 # FOR DEFS OF ALL SETTINGS, SEE CHROME POLICY PAGES:
 #   https://chromeenterprise.google/policies/
 #   https://src.chromium.org/viewvc/chrome/trunk/src/chrome/common/pref_names.cc?view=markup
-# TO VIEW ALL CURRENT ACTIVE POLICTY SETTINGS:
+# TO VIEW ALL CURRENT ACTIVE POLICY SETTINGS:
 #   chrome://policy
 
 - ansible.builtin.include_tasks: extensions.yml
