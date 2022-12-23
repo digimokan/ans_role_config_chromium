@@ -7,11 +7,16 @@ galaxy_info:
     - name: Archlinux
       versions:
         - all
+    - name: Ubuntu
+      versions:
+        - focal
+        - jammy
     - name: FreeBSD
       versions:
         - all
   galaxy_tags:
     - archlinux
+    - ubuntu
     - freebsd
     - browser
     - chromium
