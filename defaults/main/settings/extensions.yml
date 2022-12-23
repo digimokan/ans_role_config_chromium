@@ -13,6 +13,9 @@ install_vimium_ext: false
 # install and enable the bitwarden browser extension
 install_bitwarden_ext: false
 
+# install and enable the user-agent-switcher browser extension
+install_user_agent_switcher_ext: false
+
 # allow user to install extensions
 allow_user_ext_install: false
 

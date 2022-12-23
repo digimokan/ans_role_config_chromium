@@ -1,0 +1,39 @@
+# NOTE: To find extension ID, install the ext, enable developer mode,
+#       and then go to chrome://extensions.
+# Also see https://www.chromium.org/administrators/policy-list-3#ExtensionInstallForcelist
+
+- name: "Install https-everywhere extension via policy: {{ install_https_everywhere_ext }}"
+  ansible.builtin.set_fact:
+    extension_ids: "{{ extension_ids + [ ext_id ] }}"
+  vars:
+    ext_id: 'gcbommkclmclpchllfjekcdonpmejbdp'
+  when: install_https_everywhere_ext
+
+- name: "Install ublock-origin extension via policy: {{ install_ublock_origin_ext }}"
+  ansible.builtin.set_fact:
+    extension_ids: "{{ extension_ids + [ ext_id ] }}"
+  vars:
+    ext_id: 'cjpalhdlnbpafiamejdnhcphjbkeiagm'
+  when: install_ublock_origin_ext
+
+- name: "Install vimium extension via policy: {{ install_vimium_ext }}"
+  ansible.builtin.set_fact:
+    extension_ids: "{{ extension_ids + [ ext_id ] }}"
+  vars:
+    ext_id: 'dbepggeogbaibhgnhhndojpepiihcmeb'
+  when: install_vimium_ext
+
+- name: "Install bitwarden extension via policy: {{ install_bitwarden_ext }}"
+  ansible.builtin.set_fact:
+    extension_ids: "{{ extension_ids + [ ext_id ] }}"
+  vars:
+    ext_id: 'nngceckbapebfimnlniiiahkandclblb'
+  when: install_bitwarden_ext
+
+- name: "Install user-agent-switcher extension via policy: {{ install_user_agent_switcher_ext }}"
+  ansible.builtin.set_fact:
+    extension_ids: "{{ extension_ids + [ ext_id ] }}"
+  vars:
+    ext_id: 'dbclpoekepcmadpkeaelmhiheolhjflj'
+  when: install_user_agent_switcher_ext
+
