@@ -9,7 +9,7 @@
   "DnsOverHttpsMode": "{{ 'automatic' if use_dns_over_https else 'off' }}",
   "HttpsOnlyMode": "{{ 'force_enabled' if enable_https_only_mode else 'allowed' }}",
   "BuiltInDnsClientEnabled": {{ 'true' if use_builtin_dns_client else 'false' }},
-  "ExtensionInstallBlocklist": {{ '["*"]' if allow_user_ext_install else '[]' }},
+  "ExtensionInstallBlocklist": {{ '[]' if allow_user_ext_install else '["*"]' }},
   "BlockExternalExtensions": {{ 'false' if allow_user_ext_install else 'true' }},
   "EnableMediaRouter": {{ 'true' if enable_builtin_cast_ext else 'false' }},
   "ExtensionInstallForcelist": {{ extension_ids | to_json }}
