@@ -7,7 +7,7 @@
   become: true
   become_user: root
 
-- name: "Add initial overridable config file, at '{{ os_overridable_config_file_path }}'"
+- name: "Configure all settings in overridable config file, at '{{ os_overridable_config_file_path }}'"
   ansible.builtin.template:
     dest: "{{ os_overridable_config_file_path }}"
     src: 'overridable_policies.j2'
