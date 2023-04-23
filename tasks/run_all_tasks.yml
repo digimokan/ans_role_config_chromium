@@ -8,5 +8,5 @@
   ansible.builtin.include_tasks: locked_policies/main.yml
 
 - name: "Setup 'overridable' (aka 'recommended') Chromium policies"
-  ansible.builtin.include_tasks: recommended_policies/main.yml
+  ansible.builtin.include_tasks: overridable_policies/main.yml
 
