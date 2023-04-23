@@ -1,0 +1,19 @@
+- name: "Create the overridable config dir, at {{ os_overridable_config_file_path | dirname }}"
+  ansible.builtin.file:
+    path: "{{ os_overridable_config_file_path | dirname }}"
+    state: directory
+    owner: 'root'
+    mode: '755'
+  become: true
+  become_user: root
+
+- name: "Add initial overridable config file, at '{{ os_overridable_config_file_path }}'"
+  ansible.builtin.template:
+    dest: "{{ os_overridable_config_file_path }}"
+    src: 'overridable_policies.j2'
+    owner: 'root'
+    mode: '644'
+    force: no
+  become: true
+  become_user: root
+

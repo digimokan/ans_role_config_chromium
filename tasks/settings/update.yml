@@ -1,8 +1,0 @@
-- name: "Set browser-auto-update-policy to '{{ descrip_value }}'"
-  ansible.builtin.include_tasks: func/edit_numeric_policy.yml
-  vars:
-    policy_name: "ChromeVariations"
-    numeric_value: "{{ 1 if update_security_fixes_only else 0 }}"
-    descrip_value: "{{ 'fixes-only' if update_security_fixes_only else 'fixes-plus-features' }}"
-    locked: true
-
