@@ -13,7 +13,7 @@
     src: 'locked_policies.j2'
     owner: 'root'
     mode: '644'
-    force: no
+    force: yes
   become: true
   become_user: root
 
