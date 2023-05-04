@@ -2,3 +2,7 @@
   ansible.builtin.set_fact:
     main_chromium_cmd: "{{ os_main_chromium_cmd }}"
 
+- name: "See what chromium_main_cmd is IN THE CHROMIUM ROLE...."
+  ansible.builtin.debug:
+    var: chromium_main_cmd
+
