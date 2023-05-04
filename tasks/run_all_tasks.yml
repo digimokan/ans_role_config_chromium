@@ -10,3 +10,6 @@
 - name: "Setup 'overridable' (aka 'recommended') Chromium policies"
   ansible.builtin.include_tasks: overridable_policies/main.yml
 
+- name: "Export Chromium command vars"
+  ansible.builtin.include_tasks: export_vars/main.yml
+

@@ -10,3 +10,6 @@ linux_locked_config_file_path: '/etc/chromium/policies/managed/ansible_policies.
 # vimium extension config file (see install limitations noted in config file)
 linux_vimium_config_file_path: '/etc/chromium/ansible_vimium.json'
 
+# chromium executable name for Linux OSs
+linux_main_chromium_cmd: 'chromium'
+

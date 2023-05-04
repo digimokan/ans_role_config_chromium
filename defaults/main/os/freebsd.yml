@@ -10,3 +10,6 @@ freebsd_locked_config_file_path: '/usr/local/etc/chromium/policies/managed/ansib
 # vimium extension config file (see install limitations noted in config file)
 freebsd_vimium_config_file_path: '/usr/local/etc/chromium/ansible_vimium.json'
 
+# chromium executable name for the FreeBSD OS
+freebsd_main_chromium_cmd: 'chrome'
+

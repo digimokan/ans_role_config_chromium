@@ -1,0 +1,4 @@
+- name: "Export var for the main chromium command '{{ os_main_chromium_cmd }}'"
+  ansible.builtin.set_fact:
+    main_chromium_cmd: "{{ os_main_chromium_cmd }}"
+

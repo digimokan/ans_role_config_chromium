@@ -4,6 +4,7 @@
     os_overridable_config_file_path: "{{ ubuntu_overridable_config_file_path }}"
     os_locked_config_file_path: "{{ ubuntu_locked_config_file_path }}"
     os_vimium_config_file_path: "{{ ubuntu_vimium_config_file_path }}"
+    os_main_chromium_cmd: "{{ linux_main_chromium_cmd }}"
   when: ansible_distribution == "Ubuntu"
 
 - name: "Run all role tasks for Generic Linux OS"
@@ -12,6 +13,7 @@
     os_overridable_config_file_path: "{{ linux_overridable_config_file_path }}"
     os_locked_config_file_path: "{{ linux_locked_config_file_path }}"
     os_vimium_config_file_path: "{{ linux_vimium_config_file_path }}"
+    os_main_chromium_cmd: "{{ linux_main_chromium_cmd }}"
   when: (ansible_system == "Linux") and (ansible_distribution != "Ubuntu")
 
 - name: "Run all role tasks for FreeBSD"
@@ -20,5 +22,6 @@
     os_overridable_config_file_path: "{{ freebsd_overridable_config_file_path }}"
     os_locked_config_file_path: "{{ freebsd_locked_config_file_path }}"
     os_vimium_config_file_path: "{{ freebsd_vimium_config_file_path }}"
+    os_main_chromium_cmd: "{{ freebsd_main_chromium_cmd }}"
   when: ansible_os_family == "FreeBSD"
 
