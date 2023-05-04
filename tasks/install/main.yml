@@ -1,7 +1,16 @@
-- name: "Install main 'chromium' package"
+- name: "Install main 'chromium' package, for Linux"
   ansible.builtin.package:
     name: chromium
     state: present
   become: true
   become_user: root
+  when: (ansible_system == "Linux")
+
+- name: "Install main 'ungoogled-chromium' package, for FreeBSD"
+  ansible.builtin.package:
+    name: ungoogled-chromium
+    state: present
+  become: true
+  become_user: root
+  when: ansible_os_family == "FreeBSD"
 
