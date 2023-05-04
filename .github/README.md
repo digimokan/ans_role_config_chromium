@@ -55,6 +55,7 @@ Install and configure the Chromium browser.
        - name: "Install and configure the Chromium browser"
          ansible.builtin.include_role:
            name: ans_role_config_chromium
+           public: yes
    ```
 
 ## Role Options
