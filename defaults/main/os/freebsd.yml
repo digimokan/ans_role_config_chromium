@@ -1,14 +1,17 @@
 # SEE CHROMIUM PROJECT NOTES:
 #   https://www.chromium.org/administrators/linux-quick-start
 
+# chromium config dir, which holds all chromium config files
+freebsd_chromium_config_dir: '/usr/local/etc/chromium'
+
 # chromium config (aka 'Policy') file, system-wide and overridable
-freebsd_overridable_config_file_path: '/usr/local/etc/chromium/policies/recommended/ansible_policies.json'
+freebsd_overridable_config_file_path: "{{ freebsd_chromium_config_dir }}/policies/recommended/ansible_policies.json"
 
 # chromium config (aka 'Policy') file, system-wide and locked
-freebsd_locked_config_file_path: '/usr/local/etc/chromium/policies/managed/ansible_policies.json'
+freebsd_locked_config_file_path: "{{ freebsd_chromium_config_dir }}/policies/managed/ansible_policies.json"
 
 # vimium extension config file (see install limitations noted in config file)
-freebsd_vimium_config_file_path: '/usr/local/etc/chromium/ansible_vimium.json'
+freebsd_vimium_config_file_path: "{{ freebsd_chromium_config_dir }}/ansible_vimium.json"
 
 # chromium executable name for the FreeBSD OS
 freebsd_chromium_main_cmd: 'chrome'

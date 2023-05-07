@@ -1,6 +1,9 @@
 - name: "Install main Chromium application"
   ansible.builtin.include_tasks: install/main.yml
 
+- name: "Create main Chromium config dir"
+  ansible.builtin.include_tasks: config_dir/main.yml
+
 - name: "Add optional Chromium extensions"
   ansible.builtin.include_tasks: extensions/main.yml
 

@@ -1,6 +1,7 @@
 - name: "Run all role tasks for Ubuntu"
   ansible.builtin.include_tasks: run_all_tasks.yml
   vars:
+    os_chromium_config_dir: "{{ ubuntu_chromium_config_dir }}"
     os_overridable_config_file_path: "{{ ubuntu_overridable_config_file_path }}"
     os_locked_config_file_path: "{{ ubuntu_locked_config_file_path }}"
     os_vimium_config_file_path: "{{ ubuntu_vimium_config_file_path }}"
@@ -10,6 +11,7 @@
 - name: "Run all role tasks for Generic Linux OS"
   ansible.builtin.include_tasks: run_all_tasks.yml
   vars:
+    os_chromium_config_dir: "{{ linux_chromium_config_dir }}"
     os_overridable_config_file_path: "{{ linux_overridable_config_file_path }}"
     os_locked_config_file_path: "{{ linux_locked_config_file_path }}"
     os_vimium_config_file_path: "{{ linux_vimium_config_file_path }}"
@@ -19,6 +21,7 @@
 - name: "Run all role tasks for FreeBSD"
   ansible.builtin.include_tasks: run_all_tasks.yml
   vars:
+    os_chromium_config_dir: "{{ freebsd_chromium_config_dir }}"
     os_overridable_config_file_path: "{{ freebsd_overridable_config_file_path }}"
     os_locked_config_file_path: "{{ freebsd_locked_config_file_path }}"
     os_vimium_config_file_path: "{{ freebsd_vimium_config_file_path }}"
