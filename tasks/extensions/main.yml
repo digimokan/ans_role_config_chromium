@@ -1,7 +1,3 @@
-- name: "Initialize local policy-setting-var to assemble extension IDs"
-  ansible.builtin.set_fact:
-    extension_ids: []
-
 - name: "Add enabled extension IDs to list"
   ansible.builtin.include_tasks: extension_ids.yml
 
