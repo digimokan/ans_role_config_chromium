@@ -2,17 +2,17 @@
 #   https://www.chromium.org/administrators/linux-quick-start
 
 # chromium config dir, which holds all chromium config files
-linux_chromium_config_dir: '/etc/chromium'
+chromium_linux_config_dir: '/etc/chromium'
 
 # chromium config (aka 'Policy') file, system-wide and overridable
-linux_overridable_config_file_path: "{{ linux_chromium_config_dir }}/policies/recommended/ansible_policies.json"
+chromium_linux_overridable_config_file_path: "{{ chromium_linux_config_dir }}/policies/recommended/ansible_policies.json"
 
 # chromium config (aka 'Policy') file, system-wide and locked
-linux_locked_config_file_path: "{{ linux_chromium_config_dir }}/policies/managed/ansible_policies.json"
+chromium_linux_locked_config_file_path: "{{ chromium_linux_config_dir }}/policies/managed/ansible_policies.json"
 
 # vimium extension config file (see install limitations noted in config file)
-linux_vimium_config_file_path: "{{ linux_chromium_config_dir }}/ansible_vimium.json"
+chromium_linux_vimium_config_file_path: "{{ chromium_linux_config_dir }}/ansible_vimium.json"
 
 # chromium executable name for Linux OSs
-linux_chromium_main_cmd: 'chromium'
+chromium_linux_main_cmd: 'chromium'
 

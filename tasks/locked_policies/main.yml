@@ -1,15 +1,15 @@
-- name: "Create the locked config dir, at {{ os_locked_config_file_path | dirname }}"
+- name: "Create the locked config dir, at {{ chromium_os_locked_config_file_path | dirname }}"
   ansible.builtin.file:
-    path: "{{ os_locked_config_file_path | dirname }}"
+    path: "{{ chromium_os_locked_config_file_path | dirname }}"
     state: directory
     owner: 'root'
     mode: '755'
   become: true
   become_user: root
 
-- name: "Configure all settings in locked config file, at '{{ os_locked_config_file_path }}'"
+- name: "Configure all settings in locked config file, at '{{ chromium_os_locked_config_file_path }}'"
   ansible.builtin.template:
-    dest: "{{ os_locked_config_file_path }}"
+    dest: "{{ chromium_os_locked_config_file_path }}"
     src: 'locked_policies.j2'
     owner: 'root'
     mode: '644'

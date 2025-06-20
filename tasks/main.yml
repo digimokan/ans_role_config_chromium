@@ -1,30 +1,30 @@
 - name: "Run all role tasks for Ubuntu"
   ansible.builtin.include_tasks: run_all_tasks.yml
   vars:
-    os_chromium_config_dir: "{{ ubuntu_chromium_config_dir }}"
-    os_overridable_config_file_path: "{{ ubuntu_overridable_config_file_path }}"
-    os_locked_config_file_path: "{{ ubuntu_locked_config_file_path }}"
-    os_vimium_config_file_path: "{{ ubuntu_vimium_config_file_path }}"
-    os_chromium_main_cmd: "{{ linux_chromium_main_cmd }}"
+    chromium_os_config_dir: "{{ chromium_ubuntu_config_dir }}"
+    chromium_os_overridable_config_file_path: "{{ chromium_ubuntu_overridable_config_file_path }}"
+    chromium_os_locked_config_file_path: "{{ chromium_ubuntu_locked_config_file_path }}"
+    chromium_os_vimium_config_file_path: "{{ chromium_ubuntu_vimium_config_file_path }}"
+    chromium_os_main_cmd: "{{ chromium_linux_main_cmd }}"
   when: ansible_distribution == "Ubuntu"
 
 - name: "Run all role tasks for Generic Linux OS"
   ansible.builtin.include_tasks: run_all_tasks.yml
   vars:
-    os_chromium_config_dir: "{{ linux_chromium_config_dir }}"
-    os_overridable_config_file_path: "{{ linux_overridable_config_file_path }}"
-    os_locked_config_file_path: "{{ linux_locked_config_file_path }}"
-    os_vimium_config_file_path: "{{ linux_vimium_config_file_path }}"
-    os_chromium_main_cmd: "{{ linux_chromium_main_cmd }}"
+    chromium_os_config_dir: "{{ chromium_linux_config_dir }}"
+    chromium_os_overridable_config_file_path: "{{ chromium_linux_overridable_config_file_path }}"
+    chromium_os_locked_config_file_path: "{{ chromium_linux_locked_config_file_path }}"
+    chromium_os_vimium_config_file_path: "{{ chromium_linux_vimium_config_file_path }}"
+    chromium_os_main_cmd: "{{ chromium_linux_main_cmd }}"
   when: (ansible_system == "Linux") and (ansible_distribution != "Ubuntu")
 
 - name: "Run all role tasks for FreeBSD"
   ansible.builtin.include_tasks: run_all_tasks.yml
   vars:
-    os_chromium_config_dir: "{{ freebsd_chromium_config_dir }}"
-    os_overridable_config_file_path: "{{ freebsd_overridable_config_file_path }}"
-    os_locked_config_file_path: "{{ freebsd_locked_config_file_path }}"
-    os_vimium_config_file_path: "{{ freebsd_vimium_config_file_path }}"
-    os_chromium_main_cmd: "{{ freebsd_chromium_main_cmd }}"
+    chromium_os_config_dir: "{{ chromium_freebsd_config_dir }}"
+    chromium_os_overridable_config_file_path: "{{ chromium_freebsd_overridable_config_file_path }}"
+    chromium_os_locked_config_file_path: "{{ chromium_freebsd_locked_config_file_path }}"
+    chromium_os_vimium_config_file_path: "{{ chromium_freebsd_vimium_config_file_path }}"
+    chromium_os_main_cmd: "{{ chromium_freebsd_main_cmd }}"
   when: ansible_os_family == "FreeBSD"
 

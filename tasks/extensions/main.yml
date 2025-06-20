@@ -6,7 +6,7 @@
     name: ans_role_config_vimium
   vars:
     vimium_search_providers: "{{ chromium_search_providers }}"
-    vimium_config_file_path: "{{ os_vimium_config_file_path }}"
-    vimium_home_page: "{{ home_page }}"
-  when: install_vimium_ext
+    vimium_config_file_path: "{{ chromium_os_vimium_config_file_path }}"
+    vimium_chromium_home_page: "{{ chromium_home_page }}"
+  when: chromium_install_vimium_ext
 

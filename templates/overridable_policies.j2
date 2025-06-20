@@ -1,16 +1,16 @@
 {
-  "DisablePrintPreview": {{ 'false' if use_browser_print_page else 'true' }},
-  "ShowFullUrlsInAddressBar": {{ 'true' if show_full_urls_in_url_bar else 'false' }},
-  "ShowHomeButton": {{ 'true' if show_home_button else 'false' }},
-  "BookmarkBarEnabled": {{ 'true' if show_bookmarks_bar else 'false' }},
-  "AlwaysOpenPdfExternally": {{ 'true' if use_ext_pdf_viewer else 'false' }},
-  "NewTabPageLocation": "{{ home_page if (home_page) else 'about:newtab' }}",
-  "RestoreOnStartup": {{ 1 if show_restored_tabs_on_startup else 5 }},
-  "HomepageLocation": "{{ home_page if (home_page) else 'about:newtab' }}",
-  "PasswordManagerEnabled": {{ 'true' if auto_fill_passwords else 'false' }},
-  "AutofillCreditCardEnabled": {{ 'true' if auto_fill_credit_card_data else 'false' }},
-  "AutofillAddressEnabled": {{ 'true' if auto_fill_postal_addresses else 'false' }},
-  "DefaultPopupsSetting": {{ 2 if block_pop_ups else 1 }},
-  "DefaultNotificationsSetting": {{ 2 if block_desktop_notfications else 3 }}
+  "DisablePrintPreview": {{ 'false' if chromium_use_browser_print_page else 'true' }},
+  "ShowFullUrlsInAddressBar": {{ 'true' if chromium_show_full_urls_in_url_bar else 'false' }},
+  "ShowHomeButton": {{ 'true' if chromium_show_home_button else 'false' }},
+  "BookmarkBarEnabled": {{ 'true' if chromium_show_bookmarks_bar else 'false' }},
+  "AlwaysOpenPdfExternally": {{ 'true' if chromium_use_ext_pdf_viewer else 'false' }},
+  "NewTabPageLocation": "{{ chromium_home_page if (chromium_home_page) else 'about:newtab' }}",
+  "RestoreOnStartup": {{ 1 if chromium_show_restored_tabs_on_startup else 5 }},
+  "HomepageLocation": "{{ chromium_home_page if (chromium_home_page) else 'about:newtab' }}",
+  "PasswordManagerEnabled": {{ 'true' if chromium_auto_fill_passwords else 'false' }},
+  "AutofillCreditCardEnabled": {{ 'true' if chromium_auto_fill_credit_card_data else 'false' }},
+  "AutofillAddressEnabled": {{ 'true' if chromium_auto_fill_postal_addresses else 'false' }},
+  "DefaultPopupsSetting": {{ 2 if chromium_block_pop_ups else 1 }},
+  "DefaultNotificationsSetting": {{ 2 if chromium_block_desktop_notfications else 3 }}
 }
 

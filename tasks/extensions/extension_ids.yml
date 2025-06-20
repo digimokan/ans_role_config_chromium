@@ -4,30 +4,30 @@
 
 - name: "Initialize local policy-setting-var to assemble extension IDs"
   ansible.builtin.set_fact:
-    extension_ids: []
+    chromium_extension_ids: []
 
-- name: "Install https-everywhere extension via policy: {{ install_https_everywhere_ext }}"
+- name: "Install https-everywhere extension via policy: {{ chromium_install_https_everywhere_ext }}"
   ansible.builtin.set_fact:
-    extension_ids: "{{ extension_ids + [ 'gcbommkclmclpchllfjekcdonpmejbdp' ] }}"
-  when: install_https_everywhere_ext
+    chromium_extension_ids: "{{ chromium_extension_ids + [ 'gcbommkclmclpchllfjekcdonpmejbdp' ] }}"
+  when: chromium_install_https_everywhere_ext
 
-- name: "Install ublock-origin extension via policy: {{ install_ublock_origin_ext }}"
+- name: "Install ublock-origin extension via policy: {{ chromium_install_ublock_origin_ext }}"
   ansible.builtin.set_fact:
-    extension_ids: "{{ extension_ids + [ 'cjpalhdlnbpafiamejdnhcphjbkeiagm' ] }}"
-  when: install_ublock_origin_ext
+    chromium_extension_ids: "{{ chromium_extension_ids + [ 'cjpalhdlnbpafiamejdnhcphjbkeiagm' ] }}"
+  when: chromium_install_ublock_origin_ext
 
-- name: "Install vimium extension via policy: {{ install_vimium_ext }}"
+- name: "Install vimium extension via policy: {{ chromium_install_vimium_ext }}"
   ansible.builtin.set_fact:
-    extension_ids: "{{ extension_ids + [ 'dbepggeogbaibhgnhhndojpepiihcmeb' ] }}"
-  when: install_vimium_ext
+    chromium_extension_ids: "{{ chromium_extension_ids + [ 'dbepggeogbaibhgnhhndojpepiihcmeb' ] }}"
+  when: chromium_install_vimium_ext
 
-- name: "Install bitwarden extension via policy: {{ install_bitwarden_ext }}"
+- name: "Install bitwarden extension via policy: {{ chromium_install_bitwarden_ext }}"
   ansible.builtin.set_fact:
-    extension_ids: "{{ extension_ids + [ 'nngceckbapebfimnlniiiahkandclblb' ] }}"
-  when: install_bitwarden_ext
+    chromium_extension_ids: "{{ chromium_extension_ids + [ 'nngceckbapebfimnlniiiahkandclblb' ] }}"
+  when: chromium_install_bitwarden_ext
 
-- name: "Install user-agent-switcher extension via policy: {{ install_user_agent_switcher_ext }}"
+- name: "Install user-agent-switcher extension via policy: {{ chromium_install_user_agent_switcher_ext }}"
   ansible.builtin.set_fact:
-    extension_ids: "{{ extension_ids + [ 'bhchdcejhohfmigjafbampogmaanbfkg' ] }}"
-  when: install_user_agent_switcher_ext
+    chromium_extension_ids: "{{ chromium_extension_ids + [ 'bhchdcejhohfmigjafbampogmaanbfkg' ] }}"
+  when: chromium_install_user_agent_switcher_ext
 

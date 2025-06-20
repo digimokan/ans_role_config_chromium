@@ -1,30 +1,30 @@
 # home page for new tabs, and using "home" button (set '' to use menu-page)
-home_page: 'https://www.duckduckgo.com'
+chromium_home_page: 'https://www.duckduckgo.com'
 
 # on startup, show restored tabs from last session (if false, show home page)
-show_restored_tabs_on_startup: true
+chromium_show_restored_tabs_on_startup: true
 
 # Download pdfs, and use external app to view (if false, use builtin viewer)
-use_ext_pdf_viewer: false
+chromium_use_ext_pdf_viewer: false
 
 # Show a horizontal bookmarks bar, at the top of the Chromium window
-show_bookmarks_bar: false
+chromium_show_bookmarks_bar: false
 
 # show a "home" button, to load the home page in the current tab
-show_home_button: false
+chromium_show_home_button: false
 
 # show "add user profile" button in the top right user menu
-show_add_user_button: false
+chromium_show_add_user_button: false
 
 # show "guest login" button in the top right user menu
-show_guest_login_button: false
+chromium_show_guest_login_button: false
 
 # show "browser labs" features icon in toolbar
-show_browser_labs_features: false
+chromium_show_browser_labs_features: false
 
 # show full urls (including subdomains, slashes, etc) in url-bar
-show_full_urls_in_url_bar: true
+chromium_show_full_urls_in_url_bar: true
 
 # On print, use browser print page, instead of opening system-default print dialog
-use_browser_print_page: false
+chromium_use_browser_print_page: false
 

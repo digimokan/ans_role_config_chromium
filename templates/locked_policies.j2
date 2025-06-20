@@ -1,17 +1,17 @@
 {
-  "ChromeVariations": {{ 1 if update_security_fixes_only else 0 }},
-  "BrowserLabsEnabled": {{ 'true' if show_browser_labs_features else 'false' }},
-  "BrowserGuestModeEnabled": {{ 'true' if show_guest_login_button else 'false' }},
-  "BrowserAddPersonEnabled": {{ 'true' if show_add_user_button else 'false' }},
-  "SearchSuggestEnabled": {{ 'true' if show_search_suggestions_in_url_bar else 'false' }},
-  "MetricsReportingEnabled": {{ 'true' if enable_browser_metrics_reporting else 'false' }},
-  "DefaultBrowserSettingEnabled": {{ 'true' if check_if_default_browser else 'false' }},
-  "DnsOverHttpsMode": "{{ 'automatic' if use_dns_over_https else 'off' }}",
-  "HttpsOnlyMode": "{{ 'force_enabled' if enable_https_only_mode else 'allowed' }}",
-  "BuiltInDnsClientEnabled": {{ 'true' if use_builtin_dns_client else 'false' }},
-  "ExtensionInstallBlocklist": {{ '[]' if allow_user_ext_install else '["*"]' }},
-  "BlockExternalExtensions": {{ 'false' if allow_user_ext_install else 'true' }},
-  "EnableMediaRouter": {{ 'true' if enable_builtin_cast_ext else 'false' }},
-  "ExtensionInstallForcelist": {{ extension_ids | to_json }}
+  "ChromeVariations": {{ 1 if chromium_update_security_fixes_only else 0 }},
+  "BrowserLabsEnabled": {{ 'true' if chromium_show_browser_labs_features else 'false' }},
+  "BrowserGuestModeEnabled": {{ 'true' if chromium_show_guest_login_button else 'false' }},
+  "BrowserAddPersonEnabled": {{ 'true' if chromium_show_add_user_button else 'false' }},
+  "SearchSuggestEnabled": {{ 'true' if chromium_show_search_suggestions_in_url_bar else 'false' }},
+  "MetricsReportingEnabled": {{ 'true' if chromium_enable_browser_metrics_reporting else 'false' }},
+  "DefaultBrowserSettingEnabled": {{ 'true' if chromium_check_if_default_browser else 'false' }},
+  "DnsOverHttpsMode": "{{ 'automatic' if chromium_use_dns_over_https else 'off' }}",
+  "HttpsOnlyMode": "{{ 'force_enabled' if chromium_enable_https_only_mode else 'allowed' }}",
+  "BuiltInDnsClientEnabled": {{ 'true' if chromium_use_builtin_dns_client else 'false' }},
+  "ExtensionInstallBlocklist": {{ '[]' if chromium_allow_user_ext_install else '["*"]' }},
+  "BlockExternalExtensions": {{ 'false' if chromium_allow_user_ext_install else 'true' }},
+  "EnableMediaRouter": {{ 'true' if chromium_enable_builtin_cast_ext else 'false' }},
+  "ExtensionInstallForcelist": {{ chromium_extension_ids | to_json }}
 }
 

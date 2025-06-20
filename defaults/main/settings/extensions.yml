@@ -1,21 +1,21 @@
 # install and enable the HTTPS Everywhere browser extension
-install_https_everywhere_ext: true
+chromium_install_https_everywhere_ext: true
 
 # install and enable the uBlock Origin browser extension
-install_ublock_origin_ext: true
+chromium_install_ublock_origin_ext: true
 
 # enable the builtin "Google Cast" extension, for Chromecast device support
-enable_builtin_cast_ext: false
+chromium_enable_builtin_cast_ext: false
 
 # install and enable the Vimium browser extension
-install_vimium_ext: false
+chromium_install_vimium_ext: false
 
 # install and enable the bitwarden browser extension
-install_bitwarden_ext: false
+chromium_install_bitwarden_ext: false
 
 # install and enable the user-agent-switcher browser extension
-install_user_agent_switcher_ext: false
+chromium_install_user_agent_switcher_ext: false
 
 # allow user to install extensions
-allow_user_ext_install: false
+chromium_allow_user_ext_install: false
 
