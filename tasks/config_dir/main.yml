@@ -1,6 +1,6 @@
-- name: "Create the main Chromium config dir, at {{ chromium_os_config_dir }}"
+- name: "Create the main Chromium config dir, at {{ chromium_os_sys_config_dir }}"
   ansible.builtin.file:
-    path: "{{ chromium_os_config_dir }}"
+    path: "{{ chromium_os_sys_config_dir }}"
     state: directory
     owner: 'root'
     mode: '755'
