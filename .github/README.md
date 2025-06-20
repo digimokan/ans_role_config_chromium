@@ -56,13 +56,23 @@ Install and configure the Chromium browser.
          ansible.builtin.include_role:
            name: ans_role_config_chromium
            public: true
+         vars:
+           chromium_user_name: 'user5'
    ```
 
 ## Role Options
 
-See the role `defaults` file, for overridable vars:
+Vars that must be defined when including the role in the playbook:
 
-  * [defaults/main.yml](../defaults/main.yml)
+  * [dependencies](../defaults/main/dependencies/main.yml)
+
+Vars with default values, which can be overridden in the playbook:
+
+  * [overridable](../defaults/main/overridable)
+
+Vars defined by this role, exported with `public: true`, for use in other roles:
+
+  * [export](../tasks/export_vars/main.yml)
 
 ## Role Dependencies
 
