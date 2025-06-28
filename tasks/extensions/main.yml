@@ -7,6 +7,6 @@
   vars:
     vimium_search_providers: "{{ chromium_search_providers }}"
     vimium_config_file_path: "{{ chromium_os_vimium_sys_config_file_path }}"
-    vimium_chromium_home_page: "{{ chromium_home_page }}"
+    vimium_home_page: "{{ chromium_home_page }}"
   when: chromium_install_vimium_ext
 
