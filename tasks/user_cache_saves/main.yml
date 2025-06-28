@@ -1,0 +1,21 @@
+- name: "Link to saved chromium user browse and search history database file"
+  ansible.builtin.include_tasks: link_to_file.yml
+  vars:
+    chromium_target_file_path: "{{ chromium_os_user_config_dir }}/{{ chromium_user_browse_and_search_history_filename }}"
+    chromium_cache_file_path: "{{ chromium_try_link_to_saved_user_browse_and_search_history_path }}"
+  when: chromium_try_link_to_saved_user_browse_and_search_history_path | length > 0
+
+- name: "Link to saved chromium user forms history database file"
+  ansible.builtin.include_tasks: link_to_file.yml
+  vars:
+    chromium_target_file_path: "{{ chromium_os_user_config_dir }}/{{ chromium_user_form_history_filename }}"
+    chromium_cache_file_path: "{{ chromium_try_link_to_saved_user_form_history_path }}"
+  when: chromium_try_link_to_saved_user_form_history_path | length > 0
+
+- name: "Link to saved chromium user bookmarks database file"
+  ansible.builtin.include_tasks: link_to_file.yml
+  vars:
+    chromium_target_file_path: "{{ chromium_os_user_config_dir }}/{{ chromium_user_bookmarks_filename }}"
+    chromium_cache_file_path: "{{ chromium_try_link_to_saved_user_bookmarks_path }}"
+  when: chromium_try_link_to_saved_user_bookmarks_path | length > 0
+

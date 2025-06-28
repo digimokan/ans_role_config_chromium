@@ -1,0 +1,32 @@
+- name: "Get file stats of target file at '{{ chromium_target_file_path }}'"
+  ansible.builtin.stat:
+    path: "{{ chromium_target_file_path }}"
+  register: target_file_stats
+
+- name: "Get file stats of cache_file at '{{ chromium_cache_file_path }}'"
+  ansible.builtin.stat:
+    path: "{{ chromium_cache_file_path }}"
+  register: cache_file_stats
+
+- name: "Before symlinking to cache file, make backup copy of target file '{{ chromium_target_file_path }}'"
+  ansible.builtin.copy:
+    src: "{{ chromium_target_file_path }}"
+    dest: "{{ chromium_target_file_path }}.ansible_bkup"
+    force: true
+    backup: true
+  become: true
+  become_user: "{{ chromium_user_name }}"
+  when: (target_file_stats.stat.exists) and
+        (not target_file_stats.stat.islnk) and
+        (cache_file_stats.stat.exists)
+
+- name: "Symlink target file '{{ chromium_target_file_path }}' to cache file '{{ chromium_cache_file_path }}'"
+  ansible.builtin.file:
+    src: "{{ chromium_cache_file_path }}"
+    dest: "{{ chromium_target_file_path }}"
+    state: link
+    force: true
+  become: true
+  become_user: "{{ chromium_user_name }}"
+  when: cache_file_stats.stat.exists
+

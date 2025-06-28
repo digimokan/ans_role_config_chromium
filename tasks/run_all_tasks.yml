@@ -1,17 +1,23 @@
 - name: "Install main Chromium application"
   ansible.builtin.include_tasks: install/main.yml
 
-- name: "Create main Chromium config dir"
-  ansible.builtin.include_tasks: config_dir/main.yml
+- name: "Create main system-wide Chromium config dir"
+  ansible.builtin.include_tasks: sys_config_dir/main.yml
 
-- name: "Add optional Chromium extensions"
+- name: "Add optional system-wide Chromium extensions"
   ansible.builtin.include_tasks: extensions/main.yml
 
-- name: "Setup 'locked' (aka 'managed') Chromium policies"
+- name: "Setup system-wide 'locked' (aka 'managed') Chromium policies"
   ansible.builtin.include_tasks: locked_policies/main.yml
 
-- name: "Setup 'overridable' (aka 'recommended') Chromium policies"
+- name: "Setup system-wide 'overridable' (aka 'recommended') Chromium policies"
   ansible.builtin.include_tasks: overridable_policies/main.yml
+
+- name: "Create user-specific Chromium config dir"
+  ansible.builtin.include_tasks: user_config_dir/main.yml
+
+- name: "Link to user saved cache files, if they exist"
+  ansible.builtin.include_tasks: user_cache_saves/main.yml
 
 - name: "Export Chromium command vars"
   ansible.builtin.include_tasks: export_vars/main.yml

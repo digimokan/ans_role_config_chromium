@@ -1,0 +1,17 @@
+# main user settings directory
+chromium_user_settings_subdir: ".config/chromium/Default"
+
+# user saved browse-history and search-history database filename
+chromium_user_browse_and_search_history_filename: "History"
+
+# user saved-data-entered-into-forms filename
+chromium_user_form_history_filename: "Web Data"
+
+# user saved bookmarks icons filename
+chromium_user_bookmarks_filename: "Bookmarks"
+
+# try to make symlinks to saved chromium history/etc cache files
+chromium_try_link_to_saved_user_browse_and_search_history_path: ""
+chromium_try_link_to_saved_user_form_history_path: ""
+chromium_try_link_to_saved_user_bookmarks_path: ""
+

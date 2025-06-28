@@ -2,6 +2,7 @@
   ansible.builtin.include_tasks: run_all_tasks.yml
   vars:
     chromium_os_sys_config_dir: "{{ chromium_ubuntu_sys_config_dir }}"
+    chromium_os_user_config_dir: "/home/{{ chromium_user_name }}/{{ chromium_user_settings_subdir }}"
     chromium_os_overridable_sys_config_file_path: "{{ chromium_ubuntu_overridable_sys_config_file_path }}"
     chromium_os_locked_sys_config_file_path: "{{ chromium_ubuntu_locked_sys_config_file_path }}"
     chromium_os_vimium_sys_config_file_path: "{{ chromium_ubuntu_vimium_sys_config_file_path }}"
@@ -12,6 +13,7 @@
   ansible.builtin.include_tasks: run_all_tasks.yml
   vars:
     chromium_os_sys_config_dir: "{{ chromium_linux_sys_config_dir }}"
+    chromium_os_user_config_dir: "/home/{{ chromium_user_name }}/{{ chromium_user_settings_subdir }}"
     chromium_os_overridable_sys_config_file_path: "{{ chromium_linux_overridable_sys_config_file_path }}"
     chromium_os_locked_sys_config_file_path: "{{ chromium_linux_locked_sys_config_file_path }}"
     chromium_os_vimium_sys_config_file_path: "{{ chromium_linux_vimium_sys_config_file_path }}"
@@ -22,6 +24,7 @@
   ansible.builtin.include_tasks: run_all_tasks.yml
   vars:
     chromium_os_sys_config_dir: "{{ chromium_freebsd_sys_config_dir }}"
+    chromium_os_user_config_dir: "/home/{{ chromium_user_name }}/{{ chromium_user_settings_subdir }}"
     chromium_os_overridable_sys_config_file_path: "{{ chromium_freebsd_overridable_sys_config_file_path }}"
     chromium_os_locked_sys_config_file_path: "{{ chromium_freebsd_locked_sys_config_file_path }}"
     chromium_os_vimium_sys_config_file_path: "{{ chromium_freebsd_vimium_sys_config_file_path }}"

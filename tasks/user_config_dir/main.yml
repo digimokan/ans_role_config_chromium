@@ -1,0 +1,7 @@
+- name: "Create user Chromium config dir, at {{ chromium_os_user_config_dir }}"
+  ansible.builtin.file:
+    path: "{{ chromium_os_user_config_dir }}"
+    state: directory
+  become: true
+  become_user: "{{ chromium_user_name }}"
+
