@@ -1,12 +1,3 @@
 - name: "Add enabled extension IDs to list"
   ansible.builtin.include_tasks: extension_ids.yml
 
-- name: "Configure the vimium extension"
-  ansible.builtin.include_role:
-    name: ans_role_config_vimium
-  vars:
-    vimium_search_providers: "{{ chromium_search_providers }}"
-    vimium_config_file_path: "{{ chromium_os_vimium_sys_config_file_path }}"
-    vimium_home_page: "{{ chromium_home_page }}"
-  when: chromium_install_vimium_ext
-

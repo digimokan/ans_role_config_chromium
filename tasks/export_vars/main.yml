@@ -1,4 +1,28 @@
-- name: "Export var for the main chromium command '{{ chromium_os_main_cmd }}'"
+- name: "Define export var 'chromium_main_cmd'"
   ansible.builtin.set_fact:
-    chromium_main_cmd: "{{ chromium_os_main_cmd }}"
+    chromium_main_cmd: "{{ chromium_linux_main_cmd }}"
+  when: ansible_system == "Linux"
+
+- name: "Define export var 'chromium_main_cmd'"
+  ansible.builtin.set_fact:
+    chromium_main_cmd: "{{ chromium_freebsd_main_cmd }}"
+  when: ansible_os_family == "FreeBSD"
+
+- name: "Define export var 'chromium_os_vimium_sys_config_file_path'"
+  ansible.builtin.set_fact:
+    chromium_os_vimium_sys_config_file_path: "{{ chromium_ubuntu_vimium_sys_config_file_path }}"
+  when: chromium_install_vimium_ext
+        and (ansible_distribution == "Ubuntu")
+
+- name: "Define export var 'chromium_os_vimium_sys_config_file_path'"
+  ansible.builtin.set_fact:
+    chromium_os_vimium_sys_config_file_path: "{{ chromium_linux_vimium_sys_config_file_path }}"
+  when: chromium_install_vimium_ext
+        and ((ansible_system == "Linux") and (ansible_distribution != "Ubuntu"))
+
+- name: "Define export var 'chromium_os_vimium_sys_config_file_path'"
+  ansible.builtin.set_fact:
+    chromium_os_vimium_sys_config_file_path: "{{ chromium_freebsd_vimium_sys_config_file_path }}"
+  when: chromium_install_vimium_ext
+        and (ansible_os_family == "FreeBSD")
 

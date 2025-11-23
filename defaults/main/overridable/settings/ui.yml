@@ -1,6 +1,3 @@
-# home page for new tabs, and using "home" button (set '' to use menu-page)
-chromium_home_page: 'https://www.duckduckgo.com'
-
 # on startup, show restored tabs from last session (if false, show home page)
 chromium_show_restored_tabs_on_startup: true
 

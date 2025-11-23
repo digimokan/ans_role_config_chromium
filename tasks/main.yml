@@ -5,8 +5,6 @@
     chromium_os_user_config_dir: "/home/{{ chromium_user_name }}/{{ chromium_user_settings_subdir }}"
     chromium_os_overridable_sys_config_file_path: "{{ chromium_ubuntu_overridable_sys_config_file_path }}"
     chromium_os_locked_sys_config_file_path: "{{ chromium_ubuntu_locked_sys_config_file_path }}"
-    chromium_os_vimium_sys_config_file_path: "{{ chromium_ubuntu_vimium_sys_config_file_path }}"
-    chromium_os_main_cmd: "{{ chromium_linux_main_cmd }}"
   when: ansible_distribution == "Ubuntu"
 
 - name: "Run all role tasks for Generic Linux OS"
@@ -16,8 +14,6 @@
     chromium_os_user_config_dir: "/home/{{ chromium_user_name }}/{{ chromium_user_settings_subdir }}"
     chromium_os_overridable_sys_config_file_path: "{{ chromium_linux_overridable_sys_config_file_path }}"
     chromium_os_locked_sys_config_file_path: "{{ chromium_linux_locked_sys_config_file_path }}"
-    chromium_os_vimium_sys_config_file_path: "{{ chromium_linux_vimium_sys_config_file_path }}"
-    chromium_os_main_cmd: "{{ chromium_linux_main_cmd }}"
   when: (ansible_system == "Linux") and (ansible_distribution != "Ubuntu")
 
 - name: "Run all role tasks for FreeBSD"
@@ -27,7 +23,5 @@
     chromium_os_user_config_dir: "/home/{{ chromium_user_name }}/{{ chromium_user_settings_subdir }}"
     chromium_os_overridable_sys_config_file_path: "{{ chromium_freebsd_overridable_sys_config_file_path }}"
     chromium_os_locked_sys_config_file_path: "{{ chromium_freebsd_locked_sys_config_file_path }}"
-    chromium_os_vimium_sys_config_file_path: "{{ chromium_freebsd_vimium_sys_config_file_path }}"
-    chromium_os_main_cmd: "{{ chromium_freebsd_main_cmd }}"
   when: ansible_os_family == "FreeBSD"
 

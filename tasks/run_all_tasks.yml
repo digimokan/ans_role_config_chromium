@@ -1,3 +1,6 @@
+- name: "Export vars for other roles to use"
+  ansible.builtin.include_tasks: export_vars/main.yml
+
 - name: "Install main Chromium application"
   ansible.builtin.include_tasks: install/main.yml
 
@@ -18,7 +21,4 @@
 
 - name: "Link to user saved cache files, if they exist"
   ansible.builtin.include_tasks: user_cache_saves/main.yml
-
-- name: "Export Chromium command vars"
-  ansible.builtin.include_tasks: export_vars/main.yml
 
